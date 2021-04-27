@@ -56,7 +56,7 @@ def single(num1, num2, opstr, ans):
     # nums are of same length:
     line1 = "  " + num1
     line2 = opstr + " " + num2
-    line3 = "".join(["_" for i in range(len(line2))])
+    line3 = "".join(["-" for i in range(len(line2))])
     line4 = " " + ans
     if int(ans) > 0:
         line4 = " " + line4
@@ -65,9 +65,9 @@ def single(num1, num2, opstr, ans):
 
 def get_expr_ans(n1:int, n2:int, operator)-> int:
     if operator == "+":
-        return n2+n1
+        return n1+n2
     elif operator == "-":
-        return n2-n1
+        return n1-n2
 
 def add_spaces(n1, n2):
     """
@@ -100,6 +100,6 @@ def add_spaces(n1, n2):
 # print(single(-34, -123, "-", 157))
 # print(single(-345, 10, "+", -335))
 
-print( arithmetic_arranger(["192 + 23", "12 + 145", "5284 + 122"], True) )
-print(arithmetic_arranger(["1245 - 231", "123 + 1", "3641 - 1234", "2643 - 235", "2962 - 83"], True))
+#print( arithmetic_arranger(["192 + 23", "12 + 145", "5284 + 122"], True) )
+#print(arithmetic_arranger(["1245 - 231", "123 + 1", "3641 - 1234", "2643 - 235", "2962 - 83"], True))
 
